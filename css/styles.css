@@ -6,7 +6,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  color: black;
+  color: #0d70b6;
   background: black url("../images/image.jpg") no-repeat center center;
   background-size: cover;
   height: 100vh;
@@ -20,21 +20,24 @@ h1 {
   margin-top: 3vh;
   margin-bottom: 80vh;
   text-align: left;
+  -webkit-text-stroke: 1px white;
 }
 
 .contact-me {
   font-size: 1rem;
-  margin: 0 auto;
   font-weight: bold;
-  width: 25%;
+  width: 350px;
   color: white;
   padding: 10px;
   border: 1px solid lightblue;
-  background-color: darkblue;
+  background-color: #0d70b6;
   border-radius: 8px;
-  margin-bottom: 70vh;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 a:link {
-  color: lightblue;
+  color: navy;
 }
