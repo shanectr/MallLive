@@ -15,27 +15,26 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  margin-left: 25px;
   margin-top: 3vh;
-}
-
-h2 {
-  margin-bottom: 70vh;
-  font-size: 2rem;
+  margin-bottom: 80vh;
+  text-align: left;
 }
 
 .contact-me {
   font-size: 1rem;
   margin: 0 auto;
   font-weight: bold;
-  width: 20%;
+  width: 25%;
   color: white;
   padding: 10px;
   border: 1px solid lightblue;
   background-color: darkblue;
   border-radius: 8px;
+  margin-bottom: 70vh;
 }
 
-a {
-  
+a:link {
+  color: lightblue;
 }
