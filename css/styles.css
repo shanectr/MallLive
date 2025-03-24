@@ -1,0 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: black url("../images/image.jpg") no-repeat fixed center;
+}
