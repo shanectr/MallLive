@@ -3,41 +3,144 @@
   padding: 0;
 }
 
+/* Body styling */
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  color: #0d70b6;
-  background: black url("../images/image.jpg") no-repeat center center;
-  background-size: cover;
   height: 100vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-image: url("../images/mallLive.jpg");
+  background-size: cover;
+  background-position: 54%;
   position: relative;
+  max-width: 100%;
   overflow: hidden;
+  overflow-x: hidden;
 }
+
+/* Header and title styling */
 
 h1 {
-  font-size: 3.5rem;
-  margin-left: 25px;
-  margin-top: 3vh;
-  margin-bottom: 80vh;
-  text-align: left;
-  -webkit-text-stroke: 1px white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: black;
 }
 
-.contact-me {
-  font-size: 1rem;
-  font-weight: bold;
-  width: 350px;
-  color: white;
-  padding: 10px;
-  border: 1px solid lightblue;
-  background-color: #0d70b6;
-  border-radius: 8px;
-  position: fixed;
-  bottom: 30px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* for putting mall and live horizontally next to eachother */
+.container-malllive {
+  display: flex;
 }
+
+.mall {
+  font-size: 1rem;
+  padding-top: 15px;
+}
+
+.live {
+  padding-left: 1px;
+  color: black;
+  display: inline-flex;
+}
+
+.live::before,
+.live::after {
+  content: "LIVE";
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.live::before {
+  color: #25f4ee;
+  transform: translate(-2px, -2px);
+}
+
+.live::after {
+  color: #fe2c55;
+  transform: translate(2px, 2px);
+}
+
+.htitle {
+  letter-spacing: -2px;
+}
+
+/* Link styling */
 
 a:link {
-  color: navy;
+  color: royalblue;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  color: white;
+  background-color: black;
+  height: 100px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.foot-container {
+  padding-top: 20px;
+}
+
+/* Media queries for screen sizes */
+@media screen and (min-width: 600px) {
+  .mall {
+    font-size: 1.6rem;
+    padding-left: 10px;
+    padding-top: 20px;
+  }
+
+  .live {
+    font-size: 3rem;
+  }
+
+  .htitle {
+    font-size: 3rem;
+    padding-right: 10px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    gap: 125px;
+  }
+
+  .foot-container {
+    padding-top: 35px;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .mall {
+    font-size: 1.9rem;
+    padding-left: 10px;
+    padding-top: 24px;
+  }
+
+  .live {
+    font-size: 3.5rem;
+  }
+
+  .htitle {
+    font-size: 3.5rem;
+    padding-right: 10px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 75px;
+  }
+
+  .foot-container {
+    padding-top: 35px;
+    font-size: 1.3rem;
+  }
 }
