@@ -120,7 +120,7 @@ footer {
 @media screen and (min-width: 1025px) {
   .mall {
     font-size: 1.9rem;
-    padding-left: 10px;
+    padding-left: 30px;
     padding-top: 24px;
   }
 
@@ -130,7 +130,7 @@ footer {
 
   .htitle {
     font-size: 3.5rem;
-    padding-right: 10px;
+    padding-right: 30px;
   }
 
   footer {
