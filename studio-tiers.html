@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studios & Tiers - MallLive</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <img src="assets/logo.png" alt="MallLive Logo" />
+        </div>
+
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</div>
+
+        <nav class="nav-menu">
+          <a href="index.html" class="home-icon" aria-label="Home">
+            <img src="assets/home-icon.svg" alt="Home" />
+          </a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="studio-tiers.html">Studios & Tiers</a>
+          <a href="model-catalogue.html">Model Catalogue</a>
+          <a href="contact-us.html">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO INTRO -->
+    <section class="studio-hero-container studios-hero">
+      <div class="studio-title">
+        <h1 class="bold-white">Studios</h1>
+        <h2 class="subheading">& Tiers</h2>
+      </div>
+      <p>
+        Our fully-equipped livestream studios come with the tools and space you
+        need to shine. Whether you're showcasing fashion, tech, or home goods,
+        we've got you covered.
+      </p>
+    </section>
+
+    <!-- FLOORPLAN IMAGE -->
+    <section class="studio-hero-container floorplan-section">
+      <img
+        src="assets/floorplan.jpg"
+        alt="Studio Floorplan"
+        class="floorplan-img"
+      />
+    </section>
+
+    <!-- STUDIO CARDS SECTION -->
+    <section class="container studios-section">
+      <h2 class="section-heading">
+        Available <span class="bold-white">Studios</span>
+      </h2>
+
+      <div class="studio-cards-wrapper">
+        <!-- FEATURED CARD DISPLAY AREA -->
+        <div class="featured-studio-card" id="featured-card">
+          <!-- This area will be dynamically filled with JS -->
+          <div class="studio-card red">
+            <h3>Women's Fashion</h3>
+            <img
+              src="assets/studios/womens-fashion.jpg"
+              alt="Women's Fashion Studio"
+              class="studio-img"
+            />
+            <ul>
+              <li><strong>Room Size:</strong> 12ft x 18ft or 15ft x 20ft</li>
+              <li><strong>Ceiling Height:</strong> 10ft</li>
+              <li>
+                <strong>Power Outlets:</strong> 6 outlets spaced throughout the
+                room
+              </li>
+              <li>
+                <strong>Lighting & Equipment Included:</strong> Ring Light
+                (18"), tripods, mounts, and articulating arms
+              </li>
+            </ul>
+            <a
+              href="book-a-studio.html?studio=Women's Fashion"
+              class="book-studio-btn"
+              >Book This Studio ↗</a
+            >
+          </div>
+        </div>
+
+        <!-- THUMBNAIL GRID OF STUDIOS -->
+        <div class="studio-grid" id="studio-grid">
+          <div class="studio-card red" data-studio="Women's Fashion">
+            <h3>Women's Fashion</h3>
+            <img
+              src="assets/studios/womens-fashion.jpg"
+              alt="Women's Fashion Studio"
+            />
+            <ul>
+              <li><strong>Room Size:</strong> 12ft x 18ft or 15ft x 20ft</li>
+              <li><strong>Ceiling Height:</strong> 10ft</li>
+              <li>
+                <strong>Power Outlets:</strong> 6 outlets spaced throughout
+              </li>
+              <li>
+                <strong>Lighting & Equipment Included:</strong> Ring Light
+                (18"), tripods, mounts, articulating arms
+              </li>
+            </ul>
+            <a
+              href="book-a-studio.html?studio=Women's Fashion"
+              class="book-studio-btn"
+              >Book This Studio ↗</a
+            >
+          </div>
+
+          <div class="studio-card blue" data-studio="Cosmetics">
+            <h3>Cosmetics</h3>
+            <img src="assets/studios/cosmetics.jpg" alt="Cosmetics Studio" />
+            <ul>
+              <li><strong>Room Size:</strong> 12ft x 18ft or 15ft x 20ft</li>
+              <li><strong>Ceiling Height:</strong> 10ft</li>
+              <li>
+                <strong>Power Outlets:</strong> 6 outlets spaced throughout
+              </li>
+              <li>
+                <strong>Lighting & Equipment Included:</strong> Ring Light
+                (18"), tripods, mounts, articulating arms
+              </li>
+            </ul>
+            <a
+              href="book-a-studio.html?studio=Cosmetics"
+              class="book-studio-btn"
+              >Book This Studio ↗</a
+            >
+          </div>
+
+          <div class="studio-card gold" data-studio="Home Accessories">
+            <h3>Home Accessories</h3>
+            <img
+              src="assets/studios/home-accessories.jpg"
+              alt="Home Accessories Studio"
+            />
+            <ul>
+              <li><strong>Room Size:</strong> 12ft x 18ft or 15ft x 20ft</li>
+              <li><strong>Ceiling Height:</strong> 10ft</li>
+              <li>
+                <strong>Power Outlets:</strong> 6 outlets spaced throughout
+              </li>
+              <li>
+                <strong>Lighting & Equipment Included:</strong> Ring Light
+                (18"), tripods, mounts, articulating arms
+              </li>
+            </ul>
+            <a
+              href="book-a-studio.html?studio=Home Accessories"
+              class="book-studio-btn"
+              >Book This Studio ↗</a
+            >
+          </div>
+
+          <div
+            class="studio-card green"
+            data-studio="Menswear / Resort Fashion"
+          >
+            <h3>Menswear / Resort Fashion</h3>
+            <img src="assets/studios/menswear.jpg" alt="Menswear Studio" />
+            <ul>
+              <li><strong>Room Size:</strong> 12ft x 18ft or 15ft x 20ft</li>
+              <li><strong>Ceiling Height:</strong> 10ft</li>
+              <li>
+                <strong>Power Outlets:</strong> 6 outlets spaced throughout
+              </li>
+              <li>
+                <strong>Lighting & Equipment Included:</strong> Ring Light
+                (18"), tripods, mounts, articulating arms
+              </li>
+            </ul>
+            <a
+              href="book-a-studio.html?studio=Menswear / Resort Fashion"
+              class="book-studio-btn"
+              >Book This Studio ↗</a
+            >
+          </div>
+
+          <div class="studio-card gold" data-studio="Home and Office">
+            <h3>Home and Office</h3>
+            <img
+              src="assets/studios/home-office.jpg"
+              alt="Home and Office Studio"
+            />
+            <ul>
+              <li><strong>Room Size:</strong> 12ft x 18ft or 15ft x 20ft</li>
+              <li><strong>Ceiling Height:</strong> 10ft</li>
+              <li>
+                <strong>Power Outlets:</strong> 6 outlets spaced throughout
+              </li>
+              <li>
+                <strong>Lighting & Equipment Included:</strong> Ring Light
+                (18"), tripods, mounts, articulating arms
+              </li>
+            </ul>
+            <a
+              href="book-a-studio.html?studio=Home and Office"
+              class="book-studio-btn"
+              >Book This Studio ↗</a
+            >
+          </div>
+
+          <div
+            class="studio-card red"
+            data-studio="Luggage and Travel Accessories"
+          >
+            <h3>Luggage and Travel Accessories</h3>
+            <img src="assets/studios/luggage.jpg" alt="Luggage Studio" />
+            <ul>
+              <li><strong>Room Size:</strong> 12ft x 18ft or 15ft x 20ft</li>
+              <li><strong>Ceiling Height:</strong> 10ft</li>
+              <li>
+                <strong>Power Outlets:</strong> 6 outlets spaced throughout
+              </li>
+              <li>
+                <strong>Lighting & Equipment Included:</strong> Ring Light
+                (18"), tripods, mounts, articulating arms
+              </li>
+            </ul>
+            <a
+              href="book-a-studio.html?studio=Luggage and Travel Accessories"
+              class="book-studio-btn"
+              >Book This Studio ↗</a
+            >
+          </div>
+
+          <div class="studio-card blue" data-studio="Model Changing Room">
+            <h3>Model Changing Room</h3>
+            <img
+              src="assets/studios/model-changing.jpg"
+              alt="Model Changing Room"
+            />
+            <ul>
+              <li><strong>Room Size:</strong> 12ft x 18ft or 15ft x 20ft</li>
+              <li><strong>Ceiling Height:</strong> 10ft</li>
+              <li>
+                <strong>Power Outlets:</strong> 6 outlets spaced throughout
+              </li>
+              <li>
+                <strong>Lighting & Equipment Included:</strong> Ring Light
+                (18"), tripods, mounts, articulating arms
+              </li>
+            </ul>
+            <a
+              href="book-a-studio.html?studio=Model Changing Room"
+              class="book-studio-btn"
+              >Book This Studio ↗</a
+            >
+          </div>
+
+          <div class="studio-card green" data-studio="Patio, Lawn, and Garden">
+            <h3>Patio, Lawn, and Garden</h3>
+            <img
+              src="assets/studios/patio-garden.jpg"
+              alt="Patio, Lawn, and Garden Studio"
+            />
+            <ul>
+              <li><strong>Room Size:</strong> 12ft x 18ft or 15ft x 20ft</li>
+              <li><strong>Ceiling Height:</strong> 10ft</li>
+              <li>
+                <strong>Power Outlets:</strong> 6 outlets spaced throughout
+              </li>
+              <li>
+                <strong>Lighting & Equipment Included:</strong> Ring Light
+                (18"), tripods, mounts, articulating arms
+              </li>
+            </ul>
+            <a
+              href="book-a-studio.html?studio=Patio, Lawn, and Garden"
+              class="book-studio-btn"
+              >Book This Studio ↗</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING TABLE SECTION -->
+    <section class="container pricing-section">
+      <h2 class="pricing-heading">
+        Tiered <span class="bold-white">Pricing</span>
+      </h2>
+
+      <div class="pricing-table-wrapper">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Tier</th>
+              <th>Studio Size</th>
+              <th>Best For</th>
+              <th>Starting Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Basic</td>
+              <td>Small Studios</td>
+              <td>Individual sellers, simple brands, or one-off usage</td>
+              <td>$200/hr</td>
+            </tr>
+            <tr>
+              <td>Pro</td>
+              <td>Medium Studios</td>
+              <td>Small teams with more scene space and equipment</td>
+              <td>$350/hr</td>
+            </tr>
+            <tr>
+              <td>Elite</td>
+              <td>Large Studios</td>
+              <td>Growing brands needing premium setups</td>
+              <td>$500/hr+</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="table-button-wrapper">
+          <a href="book-a-studio.html" class="learn-more-btn">
+            <span class="btn-text">Book a Studio</span>
+            <span class="btn-icon">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/studio-tiers.js"></script>
+  </body>
+</html>

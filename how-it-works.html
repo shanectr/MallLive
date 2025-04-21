@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How It Works - MallLive</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <img src="assets/logo.png" alt="MallLive Logo" />
+        </div>
+
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</div>
+
+        <nav class="nav-menu">
+          <a href="index.html" class="home-icon" aria-label="Home">
+            <img src="assets/home-icon.svg" alt="Home" />
+          </a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="studio-tiers.html">Studios & Tiers</a>
+          <a href="model-catalogue.html">Model Catalogue</a>
+          <a href="contact-us.html">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <section class="how-it-works-content container">
+      <h1 class="how-it-works-title">
+        <span class="light">How It</span> <span class="bold-white">Works</span>
+      </h1>
+
+      <div class="hiw-grid">
+        <div class="hiw-image">
+          <img src="assets/livestream-phone.jpg" alt="Live Selling Example" />
+        </div>
+        <div class="hiw-text">
+          <h2 class="bold-lime">Sell How You Want</h2>
+          <p class="hiw-p">
+            <strong
+              >MallLIVE offers flexible options tailored to your
+              business:</strong
+            >
+          </p>
+          <ul class="hiw-ul">
+            <li>
+              <strong>Sell It Yourself:</strong> Bring your own team and take
+              full creative control of your livestreams.
+            </li>
+            <li>
+              <strong>Let Us Handle It:</strong> Choose from our catalog of
+              trained in-house models to represent your products live.
+            </li>
+          </ul>
+          <p class="hiw-ul-p">
+            <strong>All plans include access to our creative suite:</strong>
+          </p>
+          <ul class="hiw-ul">
+            <li>
+              <strong>Digital Designers:</strong> Get custom logos, on-screen
+              overlays, and eye-catching product graphics.
+            </li>
+            <li>
+              <strong>Video Editors:</strong> Clip, polish, and repurpose your
+              content for maximum reach.
+            </li>
+            <li>
+              <strong>Equipment Add-Ons:</strong> Rent cameras, lights,
+              microphones, and more to create pro-level content.
+            </li>
+          </ul>
+          <a href="book-a-studio.html" class="learn-more-btn hiw-btn">
+            <span class="btn-text">Book a Studio</span>
+            <span class="btn-icon">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/hiw.js"></script>
+  </body>
+</html>

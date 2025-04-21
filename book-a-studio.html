@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Studio - MallLive</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <img src="assets/logo.png" alt="MallLive Logo" />
+        </div>
+
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</div>
+
+        <nav class="nav-menu">
+          <a href="index.html" class="home-icon" aria-label="Home">
+            <img src="assets/home-icon.svg" alt="Home" />
+          </a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="studio-tiers.html">Studios & Tiers</a>
+          <a href="model-catalogue.html">Model Catalogue</a>
+          <a href="contact-us.html">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="container booking-form-section">
+      <h1 class="form-title">
+        Book a<br /><span class="bold-lime">Studio</span>
+      </h1>
+
+      <form id="studio-booking-form" novalidate>
+        <!-- Contact Info -->
+        <div class="form-row">
+          <input type="text" name="fullName" placeholder="Full Name" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            required
+          />
+        </div>
+        <div class="form-row">
+          <input
+            type="text"
+            name="brandName"
+            placeholder="Business / Brand Name"
+          />
+          <input type="tel" name="phone" placeholder="Phone" />
+        </div>
+
+        <!-- Tiers & Studios -->
+        <div class="studio-tier-row">
+          <fieldset class="fieldset-tiers">
+            <legend>Tiers</legend>
+            <label
+              ><input
+                type="radio"
+                name="tier"
+                value="Starter Studio"
+                required
+              />
+              Starter Studio</label
+            >
+            <label
+              ><input type="radio" name="tier" value="Pro Medium Studio" /> Pro
+              Medium Studio</label
+            >
+            <label
+              ><input type="radio" name="tier" value="Elite Studio" /> Elite
+              Studio</label
+            >
+          </fieldset>
+
+          <fieldset class="fieldset-studios">
+            <legend>Studios</legend>
+            <label
+              ><input
+                type="radio"
+                name="studio"
+                value="Women's Fashion"
+                required
+              />
+              Women's Fashion</label
+            >
+            <label
+              ><input type="radio" name="studio" value="Cosmetics" />
+              Cosmetics</label
+            >
+            <label
+              ><input type="radio" name="studio" value="Home Accessories" />
+              Home Accessories</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="studio"
+                value="Menswear / Resort Fashion"
+              />
+              Menswear / Resort Fashion</label
+            >
+            <label
+              ><input type="radio" name="studio" value="Home and Office" /> Home
+              and Office</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="studio"
+                value="Luggage and Travel Accessories"
+              />
+              Luggage and Travel Accessories</label
+            >
+            <label
+              ><input type="radio" name="studio" value="Model Changing Room" />
+              Model Changing Room</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="studio"
+                value="Patio, Lawn, and Garden"
+              />
+              Patio, Lawn, and Garden</label
+            >
+          </fieldset>
+        </div>
+
+        <!-- Content Type -->
+        <fieldset class="fieldset-content-type">
+          <legend>Content Type</legend>
+          <div class="content-type-grid">
+            <label
+              ><input
+                type="radio"
+                name="contentType"
+                value="Fashion try-on / modeling"
+                required
+              />
+              Fashion try-on / modeling</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="contentType"
+                value="Beauty or skincare demo"
+              />
+              Beauty or skincare demo</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="contentType"
+                value="Product showcase / unboxing"
+              />
+              Product showcase / unboxing</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="contentType"
+                value="Live TikTok Shop selling"
+              />
+              Live TikTok Shop selling</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="contentType"
+                value="Brand announcement or promo video"
+              />
+              Brand announcement or promo video</label
+            >
+            <label
+              ><input type="radio" name="contentType" value="Other" />
+              Other:</label
+            >
+            <div></div>
+            <input
+              type="text"
+              name="contentOther"
+              class="input-content-other"
+              placeholder="Content Type:"
+            />
+          </div>
+        </fieldset>
+
+        <!-- People Count -->
+        <input
+          type="text"
+          name="peopleCount"
+          class="input-people-count"
+          placeholder="How many people will be in the studio? (required)"
+          required
+        />
+
+        <!-- Own Model -->
+        <fieldset class="fieldset-own-model">
+          <legend class="no-glow">
+            Will you be using your own host/model(s)?
+          </legend>
+          <label
+            ><input type="radio" name="ownModel" value="Yes" required />
+            Yes</label
+          >
+          <label
+            ><input type="radio" name="ownModel" value="No" /> No, I'd like to
+            use an in-house model</label
+          >
+        </fieldset>
+
+        <!-- Model Choice -->
+        <fieldset class="fieldset-model-choice">
+          <legend class="no-glow">Choose Your Model</legend>
+          <div class="model-grid">
+            <label
+              ><input type="radio" name="model" value="Model 1" required />
+              Model 1</label
+            >
+            <label
+              ><input type="radio" name="model" value="Model 2" /> Model
+              2</label
+            >
+            <label
+              ><input type="radio" name="model" value="Model 3" /> Model
+              3</label
+            >
+            <label
+              ><input type="radio" name="model" value="Model 4" /> Model
+              4</label
+            >
+            <label
+              ><input type="radio" name="model" value="Model 5" /> Model
+              5</label
+            >
+            <label
+              ><input type="radio" name="model" value="Model 6" /> Model
+              6</label
+            >
+          </div>
+        </fieldset>
+
+        <!-- Equipment -->
+        <fieldset class="fieldset-equipment">
+          <legend>Equipment & Add-ons</legend>
+          <div class="equipment-grid">
+            <label
+              ><input type="checkbox" name="equipment" value="Camera setup" />
+              Camera setup</label
+            >
+            <label
+              ><input type="checkbox" name="equipment" value="Lighting" />
+              Lighting (Ring light, LED panels)</label
+            >
+            <label
+              ><input type="checkbox" name="equipment" value="Microphones" />
+              Microphones</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="equipment"
+                value="Product table / vanity"
+              />
+              Product table / vanity</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="equipment"
+                value="Clothing racks / hangers"
+              />
+              Clothing racks / hangers</label
+            >
+            <label
+              ><input type="checkbox" name="equipment" value="None" /> None -
+              I'll bring my own</label
+            >
+          </div>
+        </fieldset>
+
+        <!-- Support -->
+        <fieldset class="fieldset-support">
+          <legend>Would you like to add support services?</legend>
+          <div class="support-services-column">
+            <label
+              ><input type="checkbox" name="support" value="Digital Designer" />
+              Digital Designer (graphics/logo overlays)</label
+            >
+            <label
+              ><input type="checkbox" name="support" value="Video Editor" />
+              Video Editor (post-stream clipping)</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="support"
+                value="On-site Assistant"
+              />
+              On-site production assistant</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="support"
+                value="Livestream Setup Help"
+              />
+              Livestream setup help</label
+            >
+          </div>
+        </fieldset>
+
+        <!-- Notes -->
+        <fieldset class="fieldset-notes">
+          <legend>Additional Notes</legend>
+          <div class="form-row">
+            <input
+              type="text"
+              name="notes"
+              placeholder="Is there anything else we should know about your session?"
+            />
+          </div>
+        </fieldset>
+
+        <!-- Submit -->
+        <div class="submit-wrapper">
+          <button type="submit" class="submit-btn">
+            <span>Submit</span>
+            <span class="submit-icon">↗</span>
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <script src="js/book-studio.js"></script>
+  </body>
+</html>

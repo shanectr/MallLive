@@ -4,31 +4,83 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MallLive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header>
-      <h1>
-        <span class="container-malllive">
-          <p class="mall">MALL</p>
-          <p class="live">LIVE</p>
-        </span>
-        <p class="htitle">Coming Soon</p>
-      </h1>
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <img src="assets/logo.png" alt="MallLive Logo" />
+        </div>
+
+        <!-- Toggle Button for Mobile Menu -->
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</div>
+
+        <!-- Navigation Menu -->
+        <nav class="nav-menu">
+          <a href="index.html" class="home-icon" aria-label="Home">
+            <img src="assets/home-icon.svg" alt="Home" />
+          </a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="studio-tiers.html">Studios & Tiers</a>
+          <a href="model-catalogue.html">Model Catalogue</a>
+          <a href="contact-us.html">Contact Us</a>
+        </nav>
+      </div>
     </header>
+
+    <!-- HERO IMAGE & TITLE SECTION -->
+    <section class="hero">
+      <img
+        src="assets/backgroundImage.png"
+        alt="Studio Background"
+        class="hero-bg"
+      />
+      <div class="overlay-top"></div>
+
+      <div class="hero-content container">
+        <h1>
+          <span class="light">Bringing the</span>
+          <span class="bold-white">Mall</span><br />
+          <span class="light">to the</span>
+          <span class="bold-lime">Feed</span>
+        </h1>
+      </div>
+    </section>
+
+    <!-- INFO SECTION -->
+    <section class="info-section">
+      <div class="overlay-bottom"></div>
+      <div class="info-container container">
+        <p class="tagline">
+          MallLIVE is a new and exciting way for brands and small businesses to
+          sell their<br />
+          products online by tapping into the power of TikTok Shop, the
+          fastest-growing<br />
+          shopping platform today. Think of it as taking the mall experience and
+          putting it<br />
+          right in people's social media feeds.
+        </p>
+        <a href="how-it-works.html" class="learn-more-btn">
+          <span class="btn-text">Learn More</span>
+          <span class="btn-icon">↗</span>
+        </a>
+
+        <div class="hero-info-row">
+          <div>📍 2750 W Big Beaver Rd, Troy, MI 48084</div>
+          <div>✉️ info@malllive.com</div>
+          <div>📞 +123-256-7891</div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/index.js"></script>
   </body>
-  <footer>
-    <div class="foot-container">
-      <p>
-        Contact
-        <a href="mailto:mario@mkiezi.com?subject=MallLive%20|%20Inquiry"
-          >mario@mkiezi.com</a
-        >
-        for inquiries
-      </p>
-    </div>
-    <div class="foot-container">
-      <p>Find more <a href="aboutus.html">About Us</a></p>
-    </div>
-  </footer>
 </html>

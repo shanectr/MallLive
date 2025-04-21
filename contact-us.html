@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - MallLive</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <img src="assets/logo.png" alt="MallLive Logo" />
+        </div>
+
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</div>
+
+        <nav class="nav-menu">
+          <a href="index.html" class="home-icon" aria-label="Home">
+            <img src="assets/home-icon.svg" alt="Home" />
+          </a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="studio-tiers.html">Studios & Tiers</a>
+          <a href="model-catalogue.html">Model Catalogue</a>
+          <a href="contact-us.html">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN CONTACT SECTION -->
+    <main class="contact-section contact-page">
+      <div class="contact-container">
+        <!-- Left: Contact Form -->
+        <section class="contact-form">
+          <h2 class="contact-form-title">How Can We Help You?</h2>
+          <form id="contact-form" novalidate>
+            <div class="contact-form-row name-row">
+              <input
+                type="text"
+                name="firstName"
+                placeholder="First Name *"
+                required
+              />
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Last Name *"
+                required
+              />
+            </div>
+            <div class="contact-form-row">
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email *"
+                required
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Your Phone *"
+                required
+              />
+            </div>
+            <div class="contact-form-row">
+              <input
+                type="text"
+                name="companyName"
+                placeholder="Company Name *"
+                required
+              />
+            </div>
+            <div class="contact-form-row">
+              <textarea
+                name="questions"
+                rows="5"
+                placeholder="What questions do you have?"
+              ></textarea>
+            </div>
+            <div class="submit-wrapper">
+              <button type="submit" class="submit-btn">
+                Submit
+                <span class="submit-icon">→</span>
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- Right: Business Info -->
+        <section class="contact-info">
+          <h3 class="info-heading">Visit MallLive</h3>
+          <p class="info-description">
+            Have questions about how MallLive works or want to partner with us?
+            Reach out anytime — we're here to help you bring your brand to the
+            feed. Our team is available Monday through Friday from 9:00 AM to
+            6:00 PM EST.
+          </p>
+
+          <div class="info-block">
+            <p><strong>Toll Free:</strong><br />123-256-7891</p>
+            <p><strong>Local:</strong><br />123-256-7891</p>
+            <p><strong>Fax:</strong><br />123-256-7891</p>
+            <p>
+              <strong>Address:</strong><br />2750 W Big Beaver Rd,<br />Troy, MI
+              48084
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="js/contact-us.js"></script>
+  </body>
+</html>
