@@ -269,7 +269,7 @@ input[type="tel"] {
      HOW IT WORKS PAGE
   ----------------------------------- */
 .how-it-works-content {
-  padding-top: 8rem;
+  padding-top: 6rem;
 }
 .how-it-works-title {
   font-size: 5rem;
@@ -279,16 +279,22 @@ input[type="tel"] {
 .hiw-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: start;
+  align-items: center;
   gap: 2rem;
   margin-top: 3rem;
+  margin-bottom: 4rem;
+  padding: 0 2rem;
 }
 .hiw-image img {
   width: 100%;
   max-width: 450px;
   height: auto;
+  border: 1px solid pink;
+  border-radius: 8px;
+  box-shadow: 0 0 10px pink ;
 }
 .hiw-text {
+  width: 450px;
   font-size: 1.25rem;
   line-height: 1.6;
 }
@@ -1240,6 +1246,25 @@ textarea:-webkit-autofill {
 }
 
 /* -----------------------------------
+   MEDIA QUERY: MAX-WIDTH 1024PX
+----------------------------------- */
+@media (max-width: 1024px) {
+  .hiw-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .how-it-works-title {
+    padding: 0;
+    text-align: center;
+  }
+
+  .hiw-text {
+    width: 80%;
+  }
+}
+
+/* -----------------------------------
    MEDIA QUERY: MAX-WIDTH 900PX
 ----------------------------------- */
 @media (max-width: 900px) {
@@ -1318,7 +1343,7 @@ textarea:-webkit-autofill {
 
   /* ===== HOW IT WORKS PAGE ===== */
   .how-it-works-title {
-    font-size: 2.8rem;
+    font-size: 4rem;
     padding-left: 1.5rem;
     text-align: center;
   }
@@ -1330,7 +1355,7 @@ textarea:-webkit-autofill {
 
   .hiw-text {
     text-align: left;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .hiw-text h2 {
@@ -1339,7 +1364,7 @@ textarea:-webkit-autofill {
   }
 
   .hiw-image img {
-    max-width: 90%;
+    max-width: 500px;
     margin: 0 auto;
   }
 
@@ -1592,6 +1617,19 @@ textarea:-webkit-autofill {
   .studios-hero p {
     font-size: 0.65rem;
     margin-top: 0.5rem;
+  }
+
+  /* ===== HOW IT WORKS PAGE ===== */
+  .how-it-works-title {
+    font-size: 3.2rem;
+  }
+
+  .how-it-works-content.container {
+    padding: 6rem 0 0 0;
+  }
+
+  .hiw-text {
+    width: 100%;
   }
 
   /* ===== FLOORPLAN ===== */
