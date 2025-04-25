@@ -1647,6 +1647,15 @@ textarea:-webkit-autofill {
 
   .hiw-text {
     width: 100%;
+    font-size: 1rem;
+  }
+
+  .hiw-ul-p {
+    padding-left: 1rem;
+  }
+  
+  .hiw-p {
+    padding-left: 1rem;
   }
 
   /* ===== FLOORPLAN ===== */
