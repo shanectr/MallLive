@@ -477,7 +477,9 @@ input[type="tel"] {
 
 /* Book Button on Cards */
 .book-studio-btn {
-  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.6rem 1.2rem;
   border-radius: 999px;
   background: #fff;
@@ -487,7 +489,21 @@ input[type="tel"] {
   text-shadow: none;
   border: none;
   transition: 0.3s ease;
+  text-decoration: none;
+  width: fit-content;
+  max-width: 240px; /* adjust as needed */
 }
+
+.book-studio-btn svg.arrow-icon {
+  width: 1em;
+  height: 1em;
+  stroke: currentColor;
+  vertical-align: middle;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
 .book-studio-btn:hover {
   background: #ccc;
 }
@@ -1646,7 +1662,7 @@ textarea:-webkit-autofill {
   .container.studios-section {
     padding: 0;
   }
-  
+
   .studios-section h2 {
     font-size: 1.5rem;
   }

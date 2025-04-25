@@ -31,7 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
           <h3>${title}</h3>
           <img src="${imageSrc}" alt="${imageAlt}" class="studio-img" />
           <ul>${detailsHTML}</ul>
-          <a href="${linkHref}" class="book-studio-btn">Book This Studio ↗</a>
+          <a href="${linkHref}" class="book-studio-btn">
+            Book This Studio
+            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" fill="none" />
+            </svg>
+          </a>
         </div>
       `;
 
@@ -62,7 +67,12 @@ document.addEventListener("DOMContentLoaded", function () {
         <h3>${title}</h3>
         <img src="${imageSrc}" alt="${imageAlt}" class="studio-img" />
         <ul>${detailsHTML}</ul>
-        <a href="${linkHref}" class="book-studio-btn">Book This Studio ↗</a>
+        <a href="${linkHref}" class="book-studio-btn">
+          Book This Studio
+          <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" fill="none" />
+          </svg>
+        </a>
       </div>
     `;
 
