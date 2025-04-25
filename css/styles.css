@@ -494,7 +494,7 @@ input[type="tel"] {
   max-width: 240px; /* adjust as needed */
 }
 
-.book-studio-btn svg.arrow-icon {
+svg.arrow-icon {
   width: 1em;
   height: 1em;
   stroke: currentColor;
