@@ -1638,6 +1638,7 @@ textarea:-webkit-autofill {
   /* ===== HOW IT WORKS PAGE ===== */
   .how-it-works-title {
     font-size: 3.2rem;
+    padding: 0;
   }
 
   .how-it-works-content.container {
