@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return fieldset ? fieldset.querySelector("legend") : null;
   }
 
-  form.addEventListener("submit", function (e) {
+  form.addEventListener("submit", async function (e) {
     e.preventDefault();
     let isValid = true;
     let firstInvalid = null;
@@ -60,18 +60,66 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Scroll to first invalid field if any
     if (!isValid && firstInvalid) {
       firstInvalid.scrollIntoView({ behavior: "smooth", block: "center" });
       return;
     }
 
-    // Submit the form (you can replace this with real API logic)
+    // Now submit the form to backend
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
-    // Example: show confirmation popup
-    showConfirmation();
+    // 👉 Special handling for checkboxes with multiple selections
+    const equipment = [];
+    form
+      .querySelectorAll('input[name="equipment"]:checked')
+      .forEach((checkbox) => {
+        equipment.push(checkbox.value);
+      });
+
+    const support = [];
+    form
+      .querySelectorAll('input[name="support"]:checked')
+      .forEach((checkbox) => {
+        support.push(checkbox.value);
+      });
+
+    try {
+      const response = await fetch(
+        "https://malllive-backend.vercel.app/api/book-studio",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            fullName: data.fullName,
+            email: data.email,
+            phone: data.phone,
+            brandName: data.brandName,
+            tier: data.tier,
+            studio: data.studio,
+            contentType: data.contentType,
+            contentOther: data.contentOther,
+            peopleCount: data.peopleCount,
+            ownModel: data.ownModel,
+            model: data.model,
+            equipment: equipment,
+            support: support,
+            notes: data.notes,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
+
+      showConfirmation();
+    } catch (error) {
+      console.error(error);
+      alert("There was a problem submitting the form. Please try again.");
+    }
   });
 
   // Confirmation popup display
