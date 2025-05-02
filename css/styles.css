@@ -1278,6 +1278,31 @@ textarea:-webkit-autofill {
   .hiw-text {
     width: 80%;
   }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 1.5rem;
+    background: #000;
+    border: 1px solid #444;
+    padding: 2rem 1.5rem;
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: none;
+    z-index: 10;
+    border-radius: 1rem;
+  }
+
+  .nav-menu.mobile-visible {
+    display: flex !important;
+    text-align: center;
+  }
 }
 
 /* -----------------------------------
