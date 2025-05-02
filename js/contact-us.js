@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
 
-  form.addEventListener("submit", function (e) {
+  form.addEventListener("submit", async function (e) {
     e.preventDefault();
     let isValid = true;
     let firstInvalid = null;
@@ -26,8 +26,35 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // Form is valid — show confirmation popup
-    showConfirmation();
+    // Collect form data
+    const formData = new FormData(form);
+    const data = {
+      firstName: formData.get("firstName"),
+      lastName: formData.get("lastName"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      company: formData.get("company"),
+      questions: formData.get("questions"),
+    };
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send form");
+      }
+
+      showConfirmation();
+    } catch (error) {
+      console.error(error);
+      alert("There was a problem submitting your message. Please try again.");
+    }
   });
 
   // Confirmation popup
@@ -37,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
     popup.innerHTML = `
         <div class="popup-inner">
           <h2>Thank you!</h2>
-          <p>Your message has been sent successfully.</p>
+          <p>Our team will get back to you shortly.</p>
           <button class="close-popup">Return to Home</button>
         </div>
       `;
@@ -49,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Mobile Menu Toggle
+// Mobile menu toggle
 function toggleMobileMenu() {
   const nav = document.querySelector(".nav-menu");
   nav.classList.toggle("mobile-visible");
