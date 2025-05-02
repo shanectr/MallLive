@@ -1286,6 +1286,7 @@ textarea:-webkit-autofill {
 @media (max-width: 910px) {
   .mobile-menu-toggle {
     display: block;
+    font-size: 2rem;
   }
 
   .nav-menu {
