@@ -1281,18 +1281,9 @@ textarea:-webkit-autofill {
 }
 
 /* -----------------------------------
-   MEDIA QUERY: MAX-WIDTH 900PX
+   MEDIA QUERY: MAX-WIDTH 910PX
 ----------------------------------- */
-@media (max-width: 900px) {
-  fieldset.fieldset-studios label {
-    font-size: 0.95rem;
-  }
-}
-
-/* -----------------------------------
-   MEDIA QUERY: MAX-WIDTH 820PX
------------------------------------ */
-@media (max-width: 820px) {
+@media (max-width: 910px) {
   .mobile-menu-toggle {
     display: block;
   }
@@ -1316,6 +1307,15 @@ textarea:-webkit-autofill {
   .nav-menu.mobile-visible {
     display: flex !important;
     text-align: center;
+  }
+}
+
+/* -----------------------------------
+   MEDIA QUERY: MAX-WIDTH 900PX
+----------------------------------- */
+@media (max-width: 900px) {
+  fieldset.fieldset-studios label {
+    font-size: 0.95rem;
   }
 }
 
