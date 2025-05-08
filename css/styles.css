@@ -284,14 +284,16 @@ input[type="tel"] {
   margin-bottom: 4rem;
   padding: 0 2rem;
 }
-.hiw-image img {
-  width: 100%;
+.hiw-video {
+  margin-left: 120px;
+  width: 70%;
   max-width: 450px;
   height: auto;
   border: 1px solid pink;
   border-radius: 8px;
   box-shadow: 0 0 10px pink;
 }
+/* removed image and replaced with video */
 .hiw-text {
   width: 450px;
   font-size: 1.25rem;
@@ -1274,6 +1276,16 @@ textarea:-webkit-autofill {
     text-align: center;
   }
 
+  .hiw-video-container {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .hiw-video {
+    max-width: 600px;
+    margin-left: 0;
+  }
+
   .hiw-text {
     width: 80%;
   }
@@ -1409,9 +1421,8 @@ textarea:-webkit-autofill {
     text-align: center;
   }
 
-  .hiw-image img {
-    max-width: 500px;
-    margin: 0 auto;
+  .hiw-video {
+    max-width: 400px;
   }
 
   .hiw-btn {
