@@ -182,7 +182,7 @@ input[type="tel"] {
 .bold-lime {
   font-weight: 700;
   color: #b4ff00;
-  text-shadow: 0 0 4px #b4ff00, 0 0 3px #b4ff00;
+  text-shadow: 0 0 3px #b4ff00, 0 0 3px #b4ff00;
 }
 
 /* -----------------------------------
@@ -281,6 +281,7 @@ input[type="tel"] {
 .how-it-works-title {
   font-size: 5rem;
   margin-bottom: 3rem;
+  margin-top: 3rem;
   padding-left: 6rem;
 }
 .hiw-grid {
@@ -305,7 +306,7 @@ input[type="tel"] {
 .hiw-text {
   width: 450px;
   font-size: 1.25rem;
-  line-height: 1.6;
+  line-height: 1.3;
 }
 .hiw-text h2 {
   font-size: 3rem;
@@ -314,17 +315,12 @@ input[type="tel"] {
   margin-top: 1rem;
 }
 
-.hiw-ul {
-  /* list-style-type: none; */
-  margin-left: 2rem;
-}
-
-.hiw-ul-p {
-  margin-top: 2rem;
-}
-
 .hiw-p {
   margin-top: 0;
+}
+
+.hiw-p-skinny {
+  margin-bottom: 1.5rem;
 }
 
 /* -----------------------------------
@@ -1707,10 +1703,6 @@ textarea:-webkit-autofill {
   .hiw-text {
     width: 100%;
     font-size: 1rem;
-  }
-
-  .hiw-ul-p {
-    padding-left: 1rem;
   }
 
   .hiw-p {
