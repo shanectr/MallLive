@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("studio-booking-form");
 
-  // Prefill studio from URL
+  // Prefill studio from URL (if needed again later)
   const urlParams = new URLSearchParams(window.location.search);
   const prefilledStudio = urlParams.get("studio");
   if (prefilledStudio) {
@@ -11,12 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
         radio.checked = true;
       }
     });
-  }
-
-  // Helper: Check if group has an answer (radio/checkbox group)
-  function isGroupAnswered(name) {
-    const inputs = form.querySelectorAll(`input[name="${name}"]`);
-    return Array.from(inputs).some((input) => input.checked);
   }
 
   // Helper: Get legend associated with an input group
@@ -38,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       el.classList.remove("error-legend");
     });
 
-    // Validate required individual fields
+    // Validate required fields
     const requiredFields = form.querySelectorAll("[required]");
     requiredFields.forEach((field) => {
       if (!field.value.trim()) {
@@ -48,12 +42,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Validate grouped fields (radio/checkbox sections)
-    const groupFields = ["tier", "studio", "contentType", "ownModel", "model"];
-    groupFields.forEach((groupName) => {
-      const input = form.querySelector(`input[name="${groupName}"]`);
-      const legend = getLegendForInput(input);
-      if (!isGroupAnswered(groupName) && legend) {
+    // Grouped radio questions
+    const radioGroups = ["sellOnTikTok", "liveExperience"];
+    radioGroups.forEach((groupName) => {
+      const group = form.querySelectorAll(`input[name="${groupName}"]`);
+      const legend = getLegendForInput(group[0]);
+      const isChecked = Array.from(group).some((input) => input.checked);
+      if (!isChecked && legend) {
         legend.classList.add("error-legend");
         if (!firstInvalid) firstInvalid = legend;
         isValid = false;
@@ -65,24 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // Now submit the form to backend
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
-
-    // 👉 Special handling for checkboxes with multiple selections
-    const equipment = [];
-    form
-      .querySelectorAll('input[name="equipment"]:checked')
-      .forEach((checkbox) => {
-        equipment.push(checkbox.value);
-      });
-
-    const support = [];
-    form
-      .querySelectorAll('input[name="support"]:checked')
-      .forEach((checkbox) => {
-        support.push(checkbox.value);
-      });
 
     try {
       const response = await fetch(
@@ -97,15 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
             email: data.email,
             phone: data.phone,
             brandName: data.brandName,
-            tier: data.tier,
-            studio: data.studio,
-            contentType: data.contentType,
-            contentOther: data.contentOther,
-            peopleCount: data.peopleCount,
-            ownModel: data.ownModel,
-            model: data.model,
-            equipment: equipment,
-            support: support,
+            productDescription: data.productDescription,
+            sellOnTikTok: data.sellOnTikTok,
+            liveExperience: data.liveExperience,
             notes: data.notes,
           }),
         }
@@ -122,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Confirmation popup display
+  // Confirmation popup
   function showConfirmation() {
     const popup = document.createElement("div");
     popup.classList.add("confirmation-popup");
@@ -140,12 +113,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// Mobile nav
 function toggleMobileMenu() {
   const nav = document.querySelector(".nav-menu");
   nav.classList.toggle("mobile-visible");
 }
 
-// Only show the home icon if we're not on the homepage
 const isHomepage =
   location.pathname.endsWith("index.html") || location.pathname === "/";
 const homeIcon = document.querySelector(".home-icon");
