@@ -565,7 +565,7 @@ svg.arrow-icon {
 ----------------------------------- */
 .booking-form-section {
   padding: 8rem 2rem 4rem;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -610,7 +610,7 @@ input[type="tel"] {
   color: #fff;
   border: none;
   font-family: "Outfit", sans-serif;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
 }
 
 .form-row input[name="fullName"] {
@@ -626,12 +626,24 @@ input[type="tel"] {
   flex: 1.5;
 }
 
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  background: #222;
+  color: #fff;
+  border: none;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.1rem;
+  resize: vertical; /* allows user to drag to expand vertically */
+  line-height: 1.4;
+}
+
 /* -----------------------------------
    FIELDSETS & LEGENDS
 ----------------------------------- */
 fieldset {
   border: none;
-  margin-bottom: 1.5rem;
 }
 
 legend {
@@ -652,9 +664,34 @@ fieldset label {
   align-items: center;
   margin: 0.25rem 0.75rem 0.25rem 0;
   font-size: 1.15rem;
-  gap: 0.3rem;
   line-height: 1.3;
 }
+
+.fieldset-tiktok-shop,
+.fieldset-livestream-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.fieldset-tiktok-shop label,
+.fieldset-livestream-experience label {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.radio-pair-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.radio-pair-row fieldset {
+  flex: 1 1 300px;
+}
+
 /* -----------------------------------
    TIERS + STUDIOS SIDE-BY-SIDE
 ----------------------------------- */
@@ -936,20 +973,23 @@ fieldset:not(.fieldset-tiers):not(.fieldset-studios):not(.fieldset-equipment) {
 }
 
 /* -----------------------------------
-   UNIFORM DOTS + SELECTED GLOW
+   UNIFORM RADIO & CHECKBOX STYLING
 ----------------------------------- */
 input[type="radio"],
 input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
   background-color: #444;
-  border: 1px solid #888;
+  border: 2px solid #888;
   border-radius: 50%;
-  width: 1rem;
-  height: 1rem;
+  width: 22px;
+  height: 22px;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  position: relative;
+  transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  display: inline-block;
+  vertical-align: middle;
+  box-shadow: none;
+  padding: 0;
 }
 
 input[type="radio"]:checked,
@@ -958,18 +998,7 @@ input[type="checkbox"]:checked {
   border-color: #b4ff00;
 }
 
-input[type="radio"]:checked::after,
-input[type="checkbox"]:checked::after {
-  content: "";
-  position: absolute;
-  top: 0.25rem;
-  left: 0.25rem;
-  width: 0.4rem;
-  height: 0.4rem;
-  background: #000;
-  border-radius: 50%;
-}
-
+/* Selected label glow effect */
 label:has(input[type="radio"]:checked),
 label:has(input[type="checkbox"]:checked) {
   color: #b4ff00;
@@ -1458,16 +1487,11 @@ textarea:-webkit-autofill {
     flex-direction: column;
   }
   .form-title {
-    font-size: 2rem;
+    font-size: 3.2rem;
     text-align: center;
   }
   .form-row input {
     width: 100%;
-  }
-
-  .book-form-title {
-    font-size: 2.2rem;
-    text-align: center;
   }
 
   .studio-tier-row {
@@ -1489,6 +1513,35 @@ textarea:-webkit-autofill {
   .fieldset-studios label,
   .fieldset-tiers label {
     font-size: 1rem;
+  }
+
+  .fieldset-tiktok-shop legend,
+  .fieldset-product-info legend,
+  .fieldset-livestream-experience legend {
+    font-size: 1.5rem;
+  }
+
+  .fieldset-tiktok-shop label,
+  .fieldset-livestream-experience label {
+    font-size: 1.1rem;
+  }
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+
+  .radio-pair-row {
+    flex-direction: column;
+  }
+
+  .radio-pair-row fieldset {
+    flex: unset;
+    width: 100%;
+  }
+
+  fieldset.fieldset-notes {
+    margin-top: 1rem;
   }
 
   .fieldset-studios legend,
@@ -1764,18 +1817,12 @@ textarea:-webkit-autofill {
     font-size: 1rem;
   }
 
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"] {
-    font-size: 0.75rem;
-  }
-
   legend.no-glow {
     font-size: 1.25rem;
   }
 
   .form-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .submit-btn {

@@ -34,7 +34,7 @@
 
     <section class="container booking-form-section">
       <h1 class="form-title">
-        Book a<br /><span class="bold-lime">Studio</span>
+        MallLIVE Business<br /><span class="bold-lime">Interest Form</span>
       </h1>
 
       <form id="studio-booking-form" novalidate>
@@ -57,7 +57,60 @@
           <input type="tel" name="phone" placeholder="Phone" />
         </div>
 
-        <!-- Tiers & Studios -->
+        <!-- Product Info Section -->
+        <fieldset class="fieldset-product-info">
+          <legend>Product & TikTok Shop Info</legend>
+          <div class="form-row">
+            <input
+              type="text"
+              name="productDescription"
+              placeholder="Briefly describe your product(s):"
+            />
+          </div>
+        </fieldset>
+
+        <div class="form-row radio-pair-row">
+          <!-- TikTok Shop Question -->
+          <fieldset class="fieldset-tiktok-shop">
+            <legend class="no-glow">
+              Do you currently sell on TikTok Shop?
+            </legend>
+            <label
+              ><input type="radio" name="sellOnTikTok" value="Yes" /> Yes</label
+            >
+            <label
+              ><input type="radio" name="sellOnTikTok" value="No" /> No</label
+            >
+          </fieldset>
+
+          <!-- Livestreaming Experience Question -->
+          <fieldset class="fieldset-livestream-experience">
+            <legend class="no-glow">
+              Have you done any live shopping or livestreams before?
+            </legend>
+            <label
+              ><input type="radio" name="liveExperience" value="Yes" />
+              Yes</label
+            >
+            <label
+              ><input type="radio" name="liveExperience" value="No" /> No</label
+            >
+          </fieldset>
+        </div>
+
+        <!-- Additional Notes -->
+        <fieldset class="fieldset-notes">
+          <legend class="no-glow">Additional Notes</legend>
+          <div class="form-row">
+            <textarea
+              name="notes"
+              placeholder="Anything Else You'd Like Us to Know?"
+              rows="3"
+            ></textarea>
+          </div>
+        </fieldset>
+
+        <!-- Tiers & Studios
         <div class="studio-tier-row">
           <fieldset class="fieldset-tiers">
             <legend>Tiers</legend>
@@ -132,10 +185,10 @@
               Patio, Lawn, and Garden</label
             >
           </fieldset>
-        </div>
+        </div> -->
 
         <!-- Content Type -->
-        <fieldset class="fieldset-content-type">
+        <!-- <fieldset class="fieldset-content-type">
           <legend>Content Type</legend>
           <div class="content-type-grid">
             <label
@@ -191,19 +244,19 @@
               placeholder="Content Type:"
             />
           </div>
-        </fieldset>
+        </fieldset> -->
 
         <!-- People Count -->
-        <input
+        <!-- <input
           type="text"
           name="peopleCount"
           class="input-people-count"
           placeholder="How many people will be in the studio? (required)"
           required
-        />
+        /> -->
 
         <!-- Own Model -->
-        <fieldset class="fieldset-own-model">
+        <!-- <fieldset class="fieldset-own-model">
           <legend class="no-glow">
             Will you be using your own host/model(s)?
           </legend>
@@ -215,10 +268,10 @@
             ><input type="radio" name="ownModel" value="No" /> No, I'd like to
             use an in-house model</label
           >
-        </fieldset>
+        </fieldset> -->
 
         <!-- Model Choice -->
-        <fieldset class="fieldset-model-choice">
+        <!-- <fieldset class="fieldset-model-choice">
           <legend class="no-glow">Choose Your Model</legend>
           <div class="model-grid">
             <label
@@ -246,10 +299,10 @@
               6</label
             >
           </div>
-        </fieldset>
+        </fieldset> -->
 
         <!-- Equipment -->
-        <fieldset class="fieldset-equipment">
+        <!-- <fieldset class="fieldset-equipment">
           <legend>Equipment & Add-ons</legend>
           <div class="equipment-grid">
             <label
@@ -285,10 +338,10 @@
               I'll bring my own</label
             >
           </div>
-        </fieldset>
+        </fieldset> -->
 
         <!-- Support -->
-        <fieldset class="fieldset-support">
+        <!-- <fieldset class="fieldset-support">
           <legend>Would you like to add support services?</legend>
           <div class="support-services-column">
             <label
@@ -316,10 +369,10 @@
               Livestream setup help</label
             >
           </div>
-        </fieldset>
+        </fieldset> -->
 
         <!-- Notes -->
-        <fieldset class="fieldset-notes">
+        <!-- <fieldset class="fieldset-notes">
           <legend>Additional Notes</legend>
           <div class="form-row">
             <input
@@ -328,7 +381,7 @@
               placeholder="Is there anything else we should know about your session?"
             />
           </div>
-        </fieldset>
+        </fieldset> -->
 
         <!-- Submit -->
         <div class="submit-wrapper">
