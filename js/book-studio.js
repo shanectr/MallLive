@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
     popup.innerHTML = `
       <div class="popup-inner">
         <h2>Thank you!</h2>
-        <p>Your booking request has been submitted successfully.</p>
+        <p>Your interest form has been submitted successfully. You will recieve a confirmation email shortly.</p>
         <button class="close-popup">Return to Home</button>
       </div>
     `;

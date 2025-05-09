@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     popup.innerHTML = `
         <div class="popup-inner">
           <h2>Thank you!</h2>
-          <p>Our team will get back to you shortly.</p>
+          <p>You will recieve an email copy of your submission shortly.</p>
           <button class="close-popup">Return to Home</button>
         </div>
       `;
