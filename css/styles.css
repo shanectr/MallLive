@@ -67,7 +67,7 @@ input[type="tel"] {
   width: 100%;
 }
 .logo img {
-  height: 60px;
+  height: 100px;
 }
 .nav-menu {
   display: flex;
@@ -78,7 +78,7 @@ input[type="tel"] {
   padding: 0.5rem 1.5rem;
   border: 1px solid #fff;
   border-radius: 999px;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   transition: 0.3s ease;
 }
 .nav-menu a:hover,
@@ -117,7 +117,7 @@ input[type="tel"] {
 .hero {
   position: relative;
   width: 100%;
-  height: 700px;
+  height: 800px;
   overflow: hidden;
   background: #000;
 }
@@ -127,7 +127,7 @@ input[type="tel"] {
   object-fit: cover;
   object-position: center 30%;
   position: absolute;
-  top: 180px;
+  top: 50px;
   left: 0px;
   z-index: 0;
 }
@@ -148,6 +148,8 @@ input[type="tel"] {
   );
   z-index: 1;
 }
+.hero-content.container {
+}
 .hero-content {
   position: relative;
   z-index: 2;
@@ -157,7 +159,7 @@ input[type="tel"] {
   margin: 0 auto;
 }
 .hero-content h1 {
-  font-size: 4.6rem;
+  font-size: 6rem;
   line-height: 1.2;
   letter-spacing: 0rem;
   font-weight: 400;
@@ -191,9 +193,15 @@ input[type="tel"] {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   margin-top: 2rem;
-  opacity: 0.85;
+  opacity: 1;
+}
+
+.hero-info-row img.icon {
+  height: 20px;
+  vertical-align: middle;
+  margin-right: .4rem;
 }
 
 /* -----------------------------------
@@ -222,7 +230,7 @@ input[type="tel"] {
   z-index: 1;
 }
 .tagline {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   line-height: 1.7;
   margin-bottom: 2rem;
   text-align: left;
@@ -240,7 +248,7 @@ input[type="tel"] {
   border: 1px solid #fff;
   border-radius: 999px;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-shadow: 0 0 6px #fff;
   transition: 0.3s ease;
   margin-bottom: 3rem;
@@ -1297,7 +1305,7 @@ textarea:-webkit-autofill {
 @media (max-width: 910px) {
   .mobile-menu-toggle {
     display: block;
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .nav-menu {
@@ -1307,7 +1315,7 @@ textarea:-webkit-autofill {
     border: 1px solid #444;
     padding: 2rem 1.5rem;
     position: absolute;
-    top: 75px;
+    top: 120px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -1337,35 +1345,9 @@ textarea:-webkit-autofill {
 @media (max-width: 768px) {
   /* ===== NAVIGATION ===== */
   .mobile-menu-toggle {
-    display: block;
-    position: absolute;
-    top: 1.25rem;
-    right: 1.5rem;
-    font-size: 2rem;
     color: #fff;
     cursor: pointer;
     z-index: 11;
-  }
-
-  .nav-menu {
-    flex-direction: column;
-    gap: 1.5rem;
-    background: #000;
-    border: 1px solid #444;
-    padding: 2rem 1.5rem;
-    position: absolute;
-    top: 75px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    display: none;
-    z-index: 10;
-    border-radius: 1rem;
-  }
-
-  .nav-menu.mobile-visible {
-    display: flex !important;
-    text-align: center;
   }
 
   /* ===== HERO SECTION ===== */
@@ -1377,7 +1359,8 @@ textarea:-webkit-autofill {
   }
 
   .hero-content h1 {
-    font-size: 4.3rem;
+    padding-top: 2rem;
+    font-size: 5rem;
   }
 
   /* ===== CONTACT INFO ROW ===== */
@@ -1389,7 +1372,7 @@ textarea:-webkit-autofill {
 
   /* ===== TAGLINE AND BUTTON ===== */
   .tagline {
-    font-size: 1rem;
+    font-size: 1.4rem;
     text-align: left;
   }
 
@@ -1625,9 +1608,27 @@ textarea:-webkit-autofill {
     width: 250px;
   }
 
+  .hero-content.container {
+    padding-left: 0.7rem;
+    padding-right: 0;
+  }
+
+  .overlay-top {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 28%,
+      rgba(0, 0, 0, 0.7) 40%,
+      rgba(0, 0, 0, 0.4) 55%,
+      rgba(0, 0, 0, 0.1) 65%,
+      rgba(0, 0, 0, 0) 75%
+    );
+  }
+
   .hero-content h1 {
-    font-size: 3.2rem;
-    padding-top: 2rem;
+    font-size: 3.8rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
   }
 }
 
@@ -1650,6 +1651,23 @@ textarea:-webkit-autofill {
   .hero-content h1 {
     font-size: 3.2rem;
     padding-top: 0rem;
+  }
+
+  .overlay-top {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 27%,
+      rgba(0, 0, 0, 0.7) 45%,
+      rgba(0, 0, 0, 0.4) 55%,
+      rgba(0, 0, 0, 0.1) 65%,
+      rgba(0, 0, 0, 0) 75%
+    );
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+    text-align: left;
   }
 
   /* ===== STUDIOS HERO ===== */
