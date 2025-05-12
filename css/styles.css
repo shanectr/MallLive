@@ -1712,7 +1712,11 @@ textarea:-webkit-autofill {
 
   .facts-block,
   .charts-block {
-    width: 100%;
+    width: 95%;
+  }
+
+  .facts-block {
+    margin-left: 0;
   }
 
   .gender-chart img {
@@ -1738,6 +1742,11 @@ textarea:-webkit-autofill {
   .revenue-text {
     font-size: 1.05rem;
     padding: 0 1rem;
+    max-width: 100%;
+  }
+
+  .revenue-image img {
+    max-width: 100%;
   }
 
   /* ===== STUDIOS PAGE ===== */
